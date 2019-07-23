@@ -21,6 +21,7 @@
 
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
+  console.log('B' + JSON.stringify(this.$node));
 };
 
 makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
