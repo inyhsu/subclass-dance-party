@@ -61,7 +61,7 @@ makeDancer.prototype.lineUp = function () {
 
 makeDancer.prototype.stick = function (top, left) {
 
-  setTimeout(this.setPosition(top, left).bind(this), 1000);
+  this.setPosition(top, left);
   
 };
 

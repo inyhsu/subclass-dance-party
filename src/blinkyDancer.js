@@ -22,7 +22,7 @@
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   this.$node = $('<span class="dancer, monkeyDancer"></span>');
-  this.setPosition(top + 17 , left + 17);
+  this.setPosition(top + 17, left + 17);
   // console.log('B' + JSON.stringify(this.$node));
 };
 

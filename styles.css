@@ -23,7 +23,7 @@ body, a:link, a:visited, a:active{
 }
 
 .dancer{
-  
+  display: block;
 }
 
 .monkeyDancer{
@@ -46,9 +46,8 @@ body, a:link, a:visited, a:active{
   animation-name: spin;
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
-  animation-timing-function: linear; 
-  
-
+  animation-timing-function: linear;
+  display: block;
 }
 
 
