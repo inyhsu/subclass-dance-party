@@ -4,6 +4,7 @@ body, html{
 body{
   margin: 0px;
   background-color:#444;
+  background-image: url('asset/4.jpg');
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -20,15 +21,96 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
+
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+  
+}
+
+.monkeyDancer{
+/*  border:10px solid red;
+  border-radius:10px;*/
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
   position:absolute;
+  content: url('asset/1.png');
 }
 
 .newDancer{
-  color:blue;
-  border:20px solid green;
-  border-radius:5px;
-  position:relative;
+/*  border:20px solid green;
+  border-radius:5px;*/
+  position:absolute;
+  content: url('asset/3.png');
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+  
+
 }
+
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
+  
+}
+
+.makeNewDancerTwo {
+  margin: 50px 0;
+  position: relative;
+  display: block;
+  color: yellow;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid yellow;
+  border-left: 100px solid transparent;
+  transform: rotate(35deg);
+}
+.makeNewDancerTwo:before {
+  border-bottom: 80px solid yellow;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -45px;
+  left: -65px;
+  display: block;
+  content: '';
+  transform: rotate(-35deg);
+}
+.makeNewDancerTwo:after {
+  position: absolute;
+  display: block;
+  color: yellow;
+  top: 3px;
+  left: -105px;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid yellow;
+  border-left: 100px solid transparent;
+  transform: rotate(-70deg);
+  content: '';
+}
+  

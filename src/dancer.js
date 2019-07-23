@@ -37,8 +37,8 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   this.top = top;
   this.left = left;
   this.step();
-  this.setPosition();
-  console.log('base' + JSON.stringify(this.$node));
+  this.setPosition(this.top, this.left);
+  // console.log('Base', JSON.stringify(this));
 };
 
 makeDancer.prototype.step = function () {
@@ -47,8 +47,40 @@ makeDancer.prototype.step = function () {
 
 makeDancer.prototype.setPosition = function (top, left) {
   var styleSettings = {
-    top: this.top,
-    left: this.left
+    top: top,
+    left: left
   };
   this.$node.css(styleSettings);
 };
+
+makeDancer.prototype.lineUp = function () {
+
+  this.setPosition(this.top, 0);
+  
+};
+
+makeDancer.prototype.stick = function (top, left) {
+
+  setTimeout(this.setPosition(top, left).bind(this), 1000);
+  
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
