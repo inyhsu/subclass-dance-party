@@ -35,7 +35,7 @@ body, a:link, a:visited, a:active{
   animation-timing-function: ease-in;
   animation-duration: 2s;
   position:absolute;
-  content: url('asset/1.png');
+  content: url('asset/1.gif');
 }
 
 .newDancer{
@@ -47,7 +47,7 @@ body, a:link, a:visited, a:active{
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  display: block;
+  display: absolute;
 }
 
 
@@ -74,42 +74,6 @@ body, a:link, a:visited, a:active{
 }
 
 .makeNewDancerTwo {
-  margin: 50px 0;
-  position: relative;
-  display: block;
-  color: yellow;
-  width: 0px;
-  height: 0px;
-  border-right: 100px solid transparent;
-  border-bottom: 70px solid yellow;
-  border-left: 100px solid transparent;
-  transform: rotate(35deg);
-}
-.makeNewDancerTwo:before {
-  border-bottom: 80px solid yellow;
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
   position: absolute;
-  height: 0;
-  width: 0;
-  top: -45px;
-  left: -65px;
-  display: block;
-  content: '';
-  transform: rotate(-35deg);
+  content: url('asset/5.png');
 }
-.makeNewDancerTwo:after {
-  position: absolute;
-  display: block;
-  color: yellow;
-  top: 3px;
-  left: -105px;
-  width: 0px;
-  height: 0px;
-  border-right: 100px solid transparent;
-  border-bottom: 70px solid yellow;
-  border-left: 100px solid transparent;
-  transform: rotate(-70deg);
-  content: '';
-}
-  
