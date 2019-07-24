@@ -33,23 +33,11 @@ $(document).ready(function() {
     window.dancers.push(dancer);
     window.distance.push([Math.floor(dancer.top), Math.floor(dancer.left)]);
     // console.log(window.distance);
-    
-    if (window.distance) {
-      for (var i = 0; i < window.distance.length; i++) {
-        for (var j = i + 1; j < window.distance.length; j++) {
-          let d = Math.floor(Math.hypot(window.distance[i][0] - window.distance[j][0], window.distance[i][1] - window.distance[j][1]));
-          console.log(d);
-        }
-        if ( d < 400 ) {
-          window.dancers[i].setPosition(window.distance[j][0], window.distance[j][1]);
-        }
-      }
-    }
   });
   
   $('.lineUp').on('click', function (event) {
     for (var i = 0; i < window.dancers.length; i++) {
-      window.dancers[i].lineUp();  
+      window.dancers[i].lineUp(($('body').height())*0.50) ;  
     }
   });
   
@@ -57,10 +45,20 @@ $(document).ready(function() {
     $(this).css({'width': '30px', 'height': 'auto'}); 
   });
   
-  // $('.newDancer').mouseover(function() { 
-  //   console.log('hover')
-  //   $('.newDancer').css("display",'none'); 
-  // });
+  $('.stickTogether').on('click', function (event) {
+    if (window.distance) {
+      for (var i = 0; i < window.distance.length; i++) {
+        for (var j = i + 1; j < window.distance.length; j++) {
+          var d = Math.floor(Math.hypot(window.distance[i][0] - window.distance[j][0], window.distance[i][1] - window.distance[j][1]));
+          console.log(d);
+          
+          if ( d < 500 ) {
+          window.dancers[i].setPosition(window.distance[j][0], window.distance[j][1]);
+          }
+        }
+      }
+    }
+  });
   
 });
 

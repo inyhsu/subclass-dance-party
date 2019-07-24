@@ -53,15 +53,15 @@ makeDancer.prototype.setPosition = function (top, left) {
   this.$node.css(styleSettings);
 };
 
-makeDancer.prototype.lineUp = function () {
+makeDancer.prototype.lineUp = function (top) {
 
-  this.setPosition(this.top, 0);
+  this.setPosition(top, this.left);
   
 };
 
 makeDancer.prototype.stick = function (top, left) {
 
-  setTimeout(function () {this.setPosition(top, left).bind(this)}, 5000);
+  setTimeout(function () {this.setPosition(top, left).bind(this);}, 5000);
   
 };
 
